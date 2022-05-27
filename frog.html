@@ -14,10 +14,14 @@
   font-size: 15px;
 }
 
+
+.fa {
+	  align-items: center;;
+}
+
 .active, .collapsible:hover {
   background-color: #555;
 }
-
 .content {
   padding: 0 18px;
   display: none;
@@ -159,7 +163,7 @@
 		if(count>0)
 		  icon=downLock;
 		buttonArray[count]=animalObject.title.value;
-		htmlOut +=  `<button type="button" class="collapsible" style="width:90%" onclick="buttonClick(${count})">${buttonArray[count]} ${icon}</button>`;
+		htmlOut +=  `<div class="collapsible"  onclick="buttonClick(${count})">${buttonArray[count]} ${icon}</div>`;
 		
 		htmlOut +=`<div class="content">
 					<p>${animalObject.panel.value}</p>
