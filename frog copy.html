@@ -7,23 +7,15 @@
   color: white;
   cursor: pointer;
   padding: 18px;
-  border: 10px;  
+  width: 100%;
+  border: none;
+  text-align: left;
   outline: none;
-  font-size:25px;
-  height: 30px;
-  margin-left:20px;
-  margin-right:20px;
   
 }
 
-.headerName {
-   margin-left:20px;
-   position:absolute;
-   left:20px;
-}
+
 .fa {
-    position:absolute;
-    right:40px;
 	  align-items: center;;
 }
 
@@ -34,24 +26,20 @@
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  margin-left:20px;
-  margin-right:20px;
   background-color: #f1f1f1;
 }
 
-
-
-body {
-  background-color: yellow;
+@media screen and (min-width: 360px) {
+  .collapsible,.content {
+    
+	font-size: 15px;
+  }
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-  .collapsible{
-    font-size:15px;
-    height: 5px;
+@media screen and (max-width:359px)  {
+  .collapsible,.content {
+   
+	font-size: 10px;
   }
 }
 </style>
@@ -173,8 +161,8 @@ body {
     
 	let htmlOut = "";
 
-	let downIcon='<i  class="fa fa-arrow-down"></i>'; 
-	let upIcon='<i class="fa fa-arrow-up"></i>'; 
+	let downIcon='<i style="width:10%" class="fa fa-arrow-down"></i>'; 
+	let upIcon='<i style="width:10%"class="fa fa-arrow-up"></i>'; 
 	let downLock='<i class="fa fa-lock"></i>';
 	
 	let count=0;
@@ -189,7 +177,7 @@ body {
 		if(count>0)
 		  icon=downLock;
 		buttonArray[count]=animalObject.title.value;
-		htmlOut +=  `<div class="collapsible"  onclick="buttonClick(${count})"><div class="headerName">${buttonArray[count]}</div> ${icon}</div>`;
+		htmlOut +=  `<div class="collapsible"  onclick="buttonClick(${count})">${buttonArray[count]} ${icon}</div>`;
 		
 		htmlOut +=`<div class="content">
 					<p>${animalObject.panel.value}</p>

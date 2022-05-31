@@ -7,23 +7,20 @@
   color: white;
   cursor: pointer;
   padding: 18px;
+  width: 100%;
   border: 10px;  
   outline: none;
-  font-size:25px;
-  height: 30px;
-  margin-left:20px;
-  margin-right:20px;
+  margin-right: 20px;
   
 }
 
 .headerName {
-   margin-left:20px;
    position:absolute;
    left:20px;
 }
 .fa {
     position:absolute;
-    right:40px;
+    right:20px;
 	  align-items: center;;
 }
 
@@ -34,24 +31,20 @@
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  margin-left:20px;
-  margin-right:20px;
   background-color: #f1f1f1;
 }
 
-
-
-body {
-  background-color: yellow;
+@media screen and (min-width: 360px) {
+  .collapsible,.content {
+    
+	font-size: 15px;
+  }
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
-  .collapsible{
-    font-size:15px;
-    height: 5px;
+@media screen and (max-width:359px)  {
+  .collapsible,.content {
+   
+	font-size: 10px;
   }
 }
 </style>
